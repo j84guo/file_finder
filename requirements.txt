@@ -1,0 +1,2 @@
+urwid==2.1.2
+python_Levenshtein==0.12.0
