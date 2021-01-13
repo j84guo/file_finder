@@ -24,15 +24,6 @@ class FileFinder:
     '''Find files and try to match them with a given pattern'''
     def __init__(self, baseDir):
         self._filePaths = walkFiles(baseDir)
-        self._partialLine = ''
-
-    def addFilePaths(self, s):
-        s = self._partialLine + s
-        lines = s.split(os.linesep)
-        for i in range(len(lines)):
-            if lines[i] == '':
-                continue
-            self._filePaths.append(lines[i])
 
     def _matchFiles(self, pattern):
         '''Find matching files
